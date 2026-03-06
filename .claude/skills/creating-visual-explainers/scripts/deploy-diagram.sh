@@ -46,11 +46,13 @@ echo "URL: https://${DOMAIN}"
 if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "https://${DOMAIN}" | pbcopy
     echo -e "${GREEN}URLをクリップボードにコピーしました${NC}"
-fi
-
-if command -v clip.exe &>/dev/null; then
+    open "https://${DOMAIN}"
+elif command -v clip.exe &>/dev/null; then
     echo -n "https://${DOMAIN}" | clip.exe
     echo -e "${GREEN}URLをクリップボードにコピーしました${NC}"
+    start "https://${DOMAIN}" 2>/dev/null || true
+elif command -v xdg-open &>/dev/null; then
+    xdg-open "https://${DOMAIN}"
 fi
 
 echo -e "${YELLOW}削除するとき: npx surge teardown ${DOMAIN}${NC}"
