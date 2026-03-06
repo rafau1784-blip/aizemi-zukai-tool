@@ -149,13 +149,16 @@ AI-Driven School 運営が動作確認済みですので、安心してくださ
 ```
 図解ツール/
 ├── .claude/skills/creating-visual-explainers/  ← AI への指示書（通常は非表示）
-├── README.md                         ← この説明書
-└── output/                           ← 図解の保存先
-    ├── sample/                       ← お手本の図解（3つ）
-    │   ├── cursor.html
-    │   ├── git.html
-    │   └── llm.html
-    └── ○○.html                      ← 自分で作った図解（どんどん増える）
+├── .cursor/                          ← Cursor の設定ファイル（自動生成）
+├── output/                           ← 図解の保存先
+│   ├── sample/                       ← お手本の図解（3つ）
+│   │   ├── cursor.html
+│   │   ├── git.html
+│   │   └── llm.html
+│   └── ○○.html                      ← 自分で作った図解（どんどん増える）
+├── .gitignore                        ← 内部の設定ファイル
+├── deploy-history.log                ← 公開履歴の記録
+└── README.md                         ← この説明書
 ```
 
 「.claude」で始まるフォルダは通常は非表示です。表示されなくても問題ありません。
@@ -168,6 +171,9 @@ AI がすべて自動で処理します。
 | `output/sample/` | お手本の図解3つ（Git・LLM・Cursor） | 見るだけ |
 | `README.md` | この説明書 | 読むだけ |
 | `.claude/skills/` | AI への指示書とテンプレート。AI が自動で読み込みます（通常は非表示） | なし |
+| `.cursor/` | Cursor の設定ファイル。フォルダを開くと自動で作られます | なし |
+| `.gitignore` | 内部の設定ファイル | なし |
+| `deploy-history.log` | 図解を公開したときのURL記録 | なし |
 
 ## Git で管理する場合
 
