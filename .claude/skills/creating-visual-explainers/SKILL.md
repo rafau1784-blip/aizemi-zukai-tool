@@ -75,9 +75,7 @@ Step 3 で収集した情報をもとに、図解HTMLを生成する。検索結
    - `<!-- TITLE -->` → 図解のタイトル
    - `<!-- DESCRIPTION -->` → 内容を要約した1文
    - `<!-- CONTENT_START -->` 〜 `<!-- CONTENT_END -->` → Step 4で生成したコンテンツ
-5. ファイル保存後、ブラウザで自動的に開く:
-   - macOS: `open output/{スラッグ}.html`
-   - Windows: `start output/{スラッグ}.html`
+5. ファイルを保存する（ブラウザで開くのは Step 6 のデプロイ後に行う。ローカルでは開かない）
 
 ### Step 5.5: 図解ライブラリの更新
 
