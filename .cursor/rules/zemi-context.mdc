@@ -1,6 +1,6 @@
 ---
-description: AIゼミの授業・自習セッション用の補助ルール。生徒がAIと対話するときに手動で呼び出す。
-alwaysApply: false
+description: AIゼミの授業・自習セッション用の補助ルール。常に自動適用。
+alwaysApply: true
 ---
 
 # AIゼミ 授業・自習サポートルール
